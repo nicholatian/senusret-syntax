@@ -1,9 +1,9 @@
 {
-  "name": "seti-syntax",
+  "name": "senusret-alpha-syntax",
   "theme": "syntax",
-  "version": "0.4.1",
-  "description": "Seti Syntax - A subtle dark colored theme for Atom.",
-  "repository": "https://github.com/jesseweed/seti-syntax",
+  "version": "0.0.0",
+  "description": "Senusret Alpha Syntax - A Pharaonic theme for Atom, variant A.",
+  "repository": "https://github.com/nicholatian/senusret-alpha-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">1.0"
