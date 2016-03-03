@@ -1,7 +1,7 @@
 {
   "name": "senusret-alpha-syntax",
   "theme": "syntax",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Senusret Alpha Syntax - A Pharaonic theme for Atom, variant A.",
   "repository": "https://github.com/nicholatian/senusret-alpha-syntax",
   "license": "MIT",
