@@ -21,11 +21,11 @@
   }
 
   .string.quoted.double {
-    color: lighten(@green, 20%);
+    color: @string;
 
     .punctuation.definition.string {
       &.begin, &.end {
-        color: @green;
+        color: @string;
       }
 
       .separator.key-value.html {
@@ -35,5 +35,18 @@
     }
   }
 
+  .string.quoted.single {
+    color: @string;
 
+    .punctuation.definition.string {
+      &.begin, &.end {
+        color: @string;
+      }
+
+      .separator.key-value.html {
+        color: @green;
+      }
+
+    }
+  }
 }
