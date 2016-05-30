@@ -3,7 +3,18 @@
 // COMENTS, DUHR
 .comment {
   color: @comment;
-  background: @comment-bg;
+
+  &.todo {
+    color: @comment-todo;
+  }
+
+  &.accent {
+    color: @comment-accent;
+  }
+
+  &.meta {
+    color: @comment-meta;
+  }
 }
 
 
@@ -19,12 +30,12 @@
 
   // =, +, -, ?, :, !=. &&, in (js)
   &.operator {
-    color: @white;
+    color: @operator;
   }
 
   // can't tell what this does :/
   &.other.special-method {
-    color: @keyword;
+    color: @block;
   }
 
   // can't tell what this does :/
@@ -190,27 +201,27 @@
     }
 
     &.parameters {
-      color: @code-font-color;
+      color: @punctuation;
     }
 
     &.heading,
     &.identity {
-      color: @code-font-color;
+      color: @punctuation;
     }
 
     &.bold {
-      color: @code-font-color;
+      color: @punctuation;
       font-weight: bold;
     }
 
     &.italic {
-      color: @code-font-color;
+      color: @punctuation;
       font-style: italic;
     }
   }
 
   &.section.embedded {
-    color: @code-font-color;
+    color: @punctuation;
   }
 
 }
@@ -228,11 +239,11 @@
   }
 
   &.function  {
-    color: @support; // .log of console.log, url of url(http://web.com)
+    color: @code-font-color; // .log of console.log, url of url(http://web.com)
 
     // can't tell what this does :/
     &.any-method {
-      color: @support;
+      color: @code-font-color;
     }
   }
 
@@ -242,7 +253,7 @@
   }
 
   &.type.property-name.css {
-    color: @support;
+    color: @code-font-color;
   }
 }
 
@@ -271,7 +282,7 @@
   }
 
   .punctuation.definition.tag {
-    color: @tag;
+    color: @punctuation;
   }
 
   .entity {
@@ -353,6 +364,8 @@
 }
 
 .meta {
+
+  color: @meta;
 
   &.link {
     color: @meta;
