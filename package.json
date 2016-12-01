@@ -1,11 +1,11 @@
 {
-  "name": "atom-dark-syntax",
-  "theme": "syntax",
-  "version": "0.27.0",
-  "description": "A dark theme for syntax",
-  "repository": "https://github.com/atom/atom-dark-syntax",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
-  }
+    "name":        "senusret-syntax",
+    "theme":       "syntax",
+    "version":     "0.27.0",
+    "description": "A Pharaonic syntax theme for Atom.",
+    "repository":  "https://github.com/nicholatian/senusret-syntax",
+    "license":     "MIT",
+    "engines": {
+        "atom": ">0.50.0"
+    }
 }
