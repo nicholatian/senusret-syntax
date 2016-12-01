@@ -1,9 +1,11 @@
-# Atom Dark Syntax theme
+# Senusret Syntax Highlighting Theme
 
-A dark syntax theme for Atom.
+Created by Alexander Nicholi (Nicholatian), _Senusret_ is a dark
+pastel-coloured syntax theme designed to be relatively easy on the eyes while
+still looking bold and sharp for that ignorant boss of yours who snoops around
+while you’re coding. 😉
 
-This theme is installed by default with Atom and can be activated by going to
-the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the
-_Syntax Themes_ dropdown menu.
+![](https://i.imgur.com/QHyGtbf.png)
 
-![](https://f.cloud.github.com/assets/671378/2264549/f49e9bf2-9e73-11e3-9329-e2d59dd1b119.png)
+A sample of what _Senusret_ looks like. The three languages pictured are GNU
+ARM assembly (left side), JavaScript (top center), and C++ (bottom right).
