@@ -1,107 +1,99 @@
+
 @import 'colour';
+@import 'syntaxvars';
 
-// EDITOR BACKGROUND & FONT COLORS
-.atom-text-editor, :host {
-  background-color: @code-background;
-  color: @code-font-color;
-}
+// Editor styles (background, gutter, guides)
 
-// MAIN CODE EDITOR STYLES
-.atom-text-editor, :host {
+atom-text-editor {
+  background-color: @black;
+  color: @white;
 
-  background-color: @code-background;
-  color: @code-font-color;
-
-  // border-top: solid 6px @selected-line;
-
-  // LINE THAT DESIGNATES WHERE TEXT WILL WRAP
-  .wrap-guide {
-    background: @guides;
+  .line.cursor-line {
+    background-color: @black;
   }
 
-  // LINE BETWEEN BRACKET INDENTATIONS
-  .indent-guide {
-    color: @guides;
+  .invisible {
+    color: @invisible;
+  }
+
+  .cursor {
+    border-left: @cursor-width solid @cursor-color;
+  }
+
+  .selection .region {
+    background-color: @select-bg;
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @silver;
+    box-sizing: border-box;
   }
 
   .invisible-character {
     color: @invisible;
   }
 
-  // GUTTER / LINE NUMBERS
-  .gutter {
-
-    background-color: @gutter-background;
-    color: @gutter-text;
-    // border-right: 10px solid @code-background;
-
-    .line-number {
-
-      // GUTTER BACKGROUND
-      background: @gutter-background;
-      color: @gutter-text;
-      padding-left: 10px;
-
-      // SELECTED BLOCK
-      &.cursor-line {
-        background-color: @gutter-background-highlight;
-        color: @gutter-text-highlight;
-        font-weight: 100;
-      }
-
-      // CURRENT ACTIVE LINE
-      &.cursor-line-no-selection {
-        background-color: @gutter-background-highlight !important;
-        color: @gutter-text-highlight;
-        // font-weight: bold;
-      }
-
-    }
-
-    // HOVER STATE FOR LINE NUMBERS
-    .line-number:hover {
-      background-color: @gutter-background !important;
-      color: @gutter-text-highlight;
-    }
-  }
-
-  // LINE NUMBER FOR SECTIONS THAT HAVE BEEN COLLAPSED
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: #FFF;
-    background: @gutter-text;
-  }
-
-  // INVISIBLE CHARACTES
-  .invisible {
+  .indent-guide {
     color: @invisible;
   }
 
-  // CURSOR COLOR
-  .cursor {
-    border-color: @cursor-color !important;
-    border-left: solid @cursor-width;
+  .wrap-guide {
+    background-color: @guides;
   }
 
-  // BACKGROUND OF SELECTED TEXT
-  .selection .region {
-    // background-color: rgba(230,205,105,0.2);
-    // border: solid 1px rgba(230,205,105,0.5);
-    background-color: @selected;
+  // find + replace
+  .find-result .region.region.region,
+  .current-result .region.region.region {
+    border-radius: 2pt;
+    background-color: @select-bg;
+    transition: border-color .4s;
+  }
+  .find-result .region.region.region {
+    border: 2px solid transparent;
+  }
+  .current-result .region.region.region {
+    border: 2px solid @select-bg;
+    transition-duration: .1s;
   }
 
+  .gutter {
 
-  // ADD LEFT PADDING TO CODE VIEW
-  .scroll-view {
-    padding-left: 10px;
+    .line-number {
+      color: @gutter-fg;
+      -webkit-font-smoothing: antialiased;
+
+      &.cursor-line {
+        color: @gutter-fg-hl;
+        background-color: @gutter-bg-hl;
+      }
+      &.cursor-line-no-selection {
+        background-color: transparent;
+      }
+
+      .icon-right {
+        color: @white;
+      }
+    }
+
+    &:not(.git-diff-icon) .line-number.git-line-removed {
+      &.git-line-removed::before {
+        bottom: -3px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 25px;
+        border-bottom: 1px dotted fade(@red1, 50%);
+        pointer-events: none;
+      }
+    }
   }
 
-
-  // SELECTED LINE STYLE
-  .line.cursor-line {
-    background: @selected-line !important;
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @gray;
   }
-
-
 }

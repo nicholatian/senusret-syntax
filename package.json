@@ -1,8 +1,17 @@
 {
   "name": "senusret-syntax",
   "theme": "syntax",
-  "version": "1.2.1",
-  "description": "A Pharaonic syntax theme for Atom.",
+  "version": "2.0.0",
+  "description": "A Pharaonic syntax theme for Atom, similar to Seti.",
+  "keywords": [
+      "seti",
+      "syntax",
+      "pastel",
+      "pharaoh",
+      "senusret",
+      "alexander",
+      "nicholi"
+  ],
   "repository": "https://github.com/nicholatian/senusret-syntax",
   "license": "MIT",
   "engines": {

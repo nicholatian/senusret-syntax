@@ -1,467 +1,258 @@
+
 @import '../colour';
 
-// COMENTS, DUHR
 .syntax--comment {
-  color: @comment;
+  color: @gray;
 
-  &.syntax--punc {
-    color: @comment-punc;
-  }
-
-  &.syntax--todo {
-    color: @comment-todo;
-  }
-
-  &.syntax--accent {
-    color: @comment-accent;
-  }
-
-  &.syntax--meta {
-    color: @comment-meta;
+  .syntax--markup.syntax--link {
+    color: @silver;
   }
 }
 
+.syntax--entity {
+
+  &.syntax--name.syntax--type {
+    color: @cyan1;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @cyan2;
+  }
+}
 
 .syntax--keyword {
+  color: @blue1;
 
-  // @ of @font-face & @media
-  color: @keyword;
-
-  // try, catch, if, else, return (js)
   &.syntax--control {
-    color: @keyword;
+    color: @blue1;
   }
 
-  // =, +, -, ?, :, !=.syntax-- &&, in (js)
   &.syntax--operator {
-    color: @operator;
+    color: @silver;
   }
 
-  // can't tell what this does :/
   &.syntax--other.syntax--special-method {
-    color: @block;
+    color: @puse2;
   }
 
-  // can't tell what this does :/
   &.syntax--other.syntax--unit {
-    color: @preproc;
+    color: @silver;
   }
 }
 
-
-// STORAGE |
 .syntax--storage {
-  color: @storage;
+  color: @green1;
 
-  // var of var a = b;
-  &.syntax--modifier {
-    color: @storage;
+  &.syntax--type {
+    &.syntax--annotation,
+    &.syntax--primitive {
+      color: @green1;
+    }
   }
 
+  &.syntax--modifier {
+    &.syntax--package,
+    &.syntax--import {
+      color: @red1;
+    }
+  }
 }
-
 
 .syntax--constant {
+  color: @yellow1;
 
-  // true, false, null, undefined
-  color: @constant;
+  &.syntax--variable {
+    color: @yellow2;
+  }
 
-  // \ of ("what\'s")
   &.syntax--character.syntax--escape {
-    color: @escape;
+    color: @red1;
   }
 
-  // all the numbers!
   &.syntax--numeric {
-    color: @numeric;
+    color: @blue2;
   }
 
-  // can't tell what this does :/
   &.syntax--other.syntax--color {
-    color: @constant;
+    color: @blue2;
   }
 
-  // can't tell what this does :/
   &.syntax--other.syntax--symbol {
-    color: @constant;
+    color: @yellow1;
   }
 }
-
-
 
 .syntax--variable {
+  color: @white;
 
-  // this (js), @varable_name (sass), http://web.syntax--com of url(http://web.syntax--com), variable of {{variable}} (handlebars)
-  color: @variable;
-
-  // can't tell what this does
   &.syntax--interpolation {
-    color: @variable;
+    color: @silver;
   }
 
-  // foo & bar of function name(foo, bar)
-  &.syntax--parameter.syntax--function {
-    color: @function-param;
+  &.syntax--parameter {
+    color: @white;
   }
-}
-
-
-// INVALID TEXT
-.syntax--invalid.syntax--illegal, .syntax--invalid.syntax--deprecated {
-  background: @error-bg;
-  color: @error;
 }
 
 .syntax--string {
-
-  .syntax--json {
-
-  }
-
-  // 'value' of var='value', "name.syntax--png" or src="name.syntax--png"  , etc
-  color: @string;
-
-  // REGEX - [\da-z] of /-([\da-z])/gi (js)
-  .syntax--constant {
-    color: @regex;
-  }
+  color: @red1;
 
   &.syntax--regexp {
-
-    // ?:input, select, textarea, button of  /^(?:input|select|textarea|button)$/i,
-    color: @regex;
-
-    .syntax--constant.syntax--character.syntax--escape,
-    .syntax--source.syntax--ruby.syntax--embedded,
-    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
-      color: @regex;
-    }
-
-    &.syntax--group {
-      color: @regex;
-    }
-
-    &.syntax--character-class {
-      color: @regex;
-    }
+    color: @red1;
 
     .syntax--source.syntax--ruby.syntax--embedded {
-      color: @regex;
+      color: @red1;
     }
-
   }
 
-  // site.syntax--dir in {{site.syntax--dir}}
-  .syntax--variable {
-    color: @variable;
-  }
-
-  // can't tell what this does :/
   &.syntax--other.syntax--link {
-    color: @string;
+    color: @orange1;
   }
 }
 
-// String interpolation in Ruby, CoffeeScript, and others
-.syntax--source .syntax--string {
-  .syntax--source,
-  .syntax--meta.syntax--embedded.syntax--line {
-    color: @string;
-  }
-
-  .syntax--punctuation.syntax--section.syntax--embedded {
-    color: @string;
-
-    .syntax--source {
-      color: @string;  // Required for the end of embedded strings in Ruby # 716
-    }
-  }
-}
-
-// MISC PUNCTUATION
 .syntax--punctuation {
-
-  &.syntax--terminator {
-    color: @punctuation;
-  }
-
-  &.syntax--separator {
-    color: @punctuation;
-  }
-
   &.syntax--definition {
-
-    color: @punctuation;
-
     &.syntax--comment {
-      color: @comment-punc;
+      color: @gray;
     }
 
-    // QUOTES
-    &.syntax--string,
-    &.syntax--variable,
+    &.syntax--method-parameters,
+    &.syntax--function-parameters,
+    &.syntax--parameters,
+    &.syntax--separator,
+    &.syntax--seperator,
     &.syntax--array {
-      color: @string;
-    }
-
-    &.syntax--parameters {
-      color: @punctuation;
+      color: @silver;
     }
 
     &.syntax--heading,
     &.syntax--identity {
-      color: @punctuation;
+      color: @silver;
     }
 
     &.syntax--bold {
-      color: @punctuation;
       font-weight: bold;
     }
 
     &.syntax--italic {
-      color: @punctuation;
       font-style: italic;
     }
   }
 
-  &.syntax--section.syntax--embedded {
-    color: @punctuation;
-  }
+  &.syntax--section {
+    &.syntax--embedded {
+      color: @silver;
+    }
 
+    &.syntax--method,
+    &.syntax--class,
+    &.syntax--inner-class {
+      color: @silver;
+    }
+  }
 }
 
-
-
 .syntax--support {
-
-  // background of background: none,
-  color: @support;
-
-  // SUPPORT | module of module.syntax--exports
   &.syntax--class {
-    color: @support;
+    color: @green1;
+  }
+
+  &.syntax--type {
+    color: @green1;
   }
 
   &.syntax--function  {
-    color: @code-font-color; // .syntax--log of console.syntax--log, url of url(http://web.syntax--com)
+    color: @puse1;
 
-    // can't tell what this does :/
     &.syntax--any-method {
-      color: @code-font-color;
+      color: @puse1;
     }
-  }
-
-  // {{}} of {{ variable }}
-  &.syntax--constant {
-    color: @constant;  // none of text-decoration: none;
-  }
-
-  &.syntax--type.syntax--property-name.syntax--css {
-    color: @code-font-color;
   }
 }
 
-// .syntax--class names in css & scss
-.syntax--source .syntax--entity.syntax--name.syntax--tag, .syntax--source .syntax--entity.syntax--other.syntax--attribute-name, .syntax--meta.syntax--tag.syntax--inline, .syntax--meta.syntax--tag.syntax--inline .syntax--entity {
-  color: @class;
-}
-
-  &.syntax--tag,
-  &.syntax--tag .syntax--entity {
-    color: @tag-entity;
-  }
-
-
-.syntax--html {
-
-  .syntax--string {
-    color: @code-font-color;
-  }
-
-
-  // inline elements - <span>
-  .syntax--meta {
-
-
-  }
-
-  .syntax--punctuation.syntax--definition.syntax--tag {
-    color: @punctuation;
-  }
-
-  .syntax--entity {
-
-    &.syntax--name.syntax--tag {
-      text-decoration: done;
-
-      // structural elements - <html>
-      &.syntax--structure {
-        color: @tag;
-      }
-
-      // block level elements - <div>, <h1>
-      &.syntax--block {
-        color: @tag;
-      }
-
-      // inline elements - <span>
-      &.syntax--script {
-        // color: @tag;
-      }
-
-    }
-
-    &.syntax--other {
-      &.syntax--attribute-name {
-        color: @element-attr;
-      }
-    }
-
-  }
-
-}
-
-// ENTITY | exports of module.syntax--exports, <div id= of <div id="#id">, .syntax-- of .syntax--className
 .syntax--entity {
-
-  color: @entity;
-
-  // console of console.syntax--log (js)
-  &.syntax--name.syntax--type {
-    color: @entity;
-    text-decoration: none;
-  }
-
-  &.syntax--other.syntax--inherited-class {
-    color: @entity;
-  }
-
-  // init in init: function(){} (js)
   &.syntax--name.syntax--function {
-    color: @entity;
+    color: @puse1;
   }
 
-  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @entity;
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @green1;
   }
 
   &.syntax--name.syntax--section {
-    color: @entity;
+    color: @green1;
   }
 
-  // div of <div> (html), body of body{} (css)
   &.syntax--name.syntax--tag {
-    color: @tag;
-    text-decoration: done;
+    color: @green1;
   }
 
-
-  // CSS CLASSES
   &.syntax--other.syntax--attribute-name {
-    color: @element-attr;
+    color: @white;
 
-    // CSS ID's
     &.syntax--id {
-      color: @id;
+      color: @silver;
     }
   }
 }
 
 .syntax--meta {
+  &.syntax--class {
+    color: @green1;
 
-  color: @meta;
+    &.syntax--body {
+      color: @green2;
+    }
+  }
+
+  &.syntax--method-call,
+  &.syntax--method {
+    color: @puse1;
+  }
+
+  &.syntax--definition {
+    &.syntax--variable {
+      color: @silver;
+    }
+  }
 
   &.syntax--link {
-    color: @meta;
+    color: @blue2;
   }
 
   &.syntax--require {
-    color: @meta;
+    color: @puse2;
   }
 
-
-  &.syntax--brace {
-
-    // curly braces - {}
-    &.syntax--curly {
-      color: @brackets;
-    }
-
-    // parenthesis - ()
-    &.syntax--round {
-      color: @code-font-color;
-    }
-  }
-
-  &.syntax--comma {
-    color: @punctuation;
-  }
-
-  // .syntax--css files | commas, ([controls]) of audio:not([controls])
   &.syntax--selector {
-    color: @punctuation;
+    color: @silver;
   }
 
   &.syntax--separator {
-    background-color: @punctuation;
-    color: @punctuation;
+    color: @silver;
   }
+
+  &.syntax--tag {
+    color: @silver;
+  }
+}
+
+.syntax--underline {
+  text-decoration: underline;
 }
 
 .syntax--none {
-  color: @code-font-color;
+  color: @white;
 }
 
-.syntax--markup {
-  &.syntax--bold {
-    color: @markup;
-    font-weight: bold;
+.syntax--invalid {
+  &.syntax--deprecated {
+    color: @white !important;
+    background-color: @red1 !important;
   }
-
-  &.syntax--changed {
-    color: @markup;
-  }
-
-  &.syntax--deleted {
-    color: @markup;
-  }
-
-  &.syntax--italic {
-    color: @markup;
-    font-style: italic;
-  }
-
-  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-    color: @markup;
-  }
-
-  &.syntax--inserted {
-    color: @markup;
-  }
-
-  &.syntax--list {
-    color: @markup;
-  }
-
-  &.syntax--quote {
-    color: @markup;
-  }
-
-  &.syntax--raw.syntax--inline {
-    color: @markup;
-  }
-}
-
-.syntax--source.syntax--gfm .syntax--markup {
-  -webkit-font-smoothing: auto;
-  &.syntax--heading {
-    color: @code-font-color;
-  }
-}
-
-
-atom-text-editor[mini], :host(.syntax--mini) {
- .syntax--scroll-view {
-    padding-left: 1px;
+  &.syntax--illegal {
+    color: @white !important;
+    background-color: @red2 !important;
   }
 }

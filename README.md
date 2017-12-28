@@ -1,9 +1,7 @@
 # Senusret Syntax Highlighting Theme
 
 Created by Alexander Nicholi (Nicholatian), _Senusret_ is a dark
-pastel-coloured syntax theme designed to be relatively easy on the eyes while
-still looking bold and sharp for that ignorant boss of yours who snoops around
-while you’re coding. 😉
+pastel-coloured syntax theme designed to be relatively easy on the eyes with a sharp, decisive aesthetic. 🙂
 
 ![](https://i.imgur.com/QHyGtbf.png)
 
