@@ -1,7 +1,7 @@
 {
   "name": "senusret-syntax",
   "theme": "syntax",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Pharaonic syntax theme for Atom, similar to Seti.",
   "keywords": [
     "seti",
